@@ -14,10 +14,9 @@
 
     controllers.controller('DefaultController', ['$scope', '$state', '$http', 'homeService',
         function ($scope, $state, $http, homeService) {
-            console.log("Check Login Status");
-            $scope.content = homeService.content();
-            //$scope.schools = {};
-            //$scope.schools = dummyService.schools();
+            //$scope.content = homeService.content();
+            //$scope.videos = {};
+            //$scope.videos = videosService.videos();
 
             //$scope.viewSchool = function($id) {
             //    $state.transitionTo('schools-detail', {id : $id});
@@ -26,15 +25,15 @@
         }
     ]);
 
-    controllers.controller('SchoolController', ['$scope', '$state', '$http', 'dummyService',
-        function ($scope, $state, $http, dummyService) {
+    controllers.controller('SchoolController', ['$scope', '$state', '$http', 'videosService',
+        function ($scope, $state, $http, videosService) {
 
-            $scope.schools = {};
+            /*$scope.schools = {};
             $scope.schools = dummyService.schools();
 
             $scope.viewSchool = function($id) {
                 $state.transitionTo('schools-detail', {id : $id});
-            }
+            }*/
 
         }
     ]);

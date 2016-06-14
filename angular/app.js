@@ -5,7 +5,7 @@
     angular.module('services', []);
     angular.module('directives', []);
 
-    //var apiUrl = 'http://manage.appscentral.co.uk/api/v1/';
+    application.constant('KEY', {'server' : 'p3r]pojepjprt]r9t]04tu', 'browser' : ''});
 
     /* Routes */
     application.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider)
