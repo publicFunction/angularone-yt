@@ -5,7 +5,7 @@
     
     services.factory('ApiUrl', function() {
         return {
-            url: '/'
+            url: 'https://www.googleapis.com/youtube/v3/'
         }
     });
 

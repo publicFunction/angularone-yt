@@ -15,6 +15,8 @@
     controllers.controller('DefaultController', ['$scope', '$state', '$http', 'homeService',
         function ($scope, $state, $http, homeService) {
             $scope.content = homeService.content();
+
+            console.debug($scope);
             
             //$scope.videos = {};
             //$scope.videos = videosService.videos();
