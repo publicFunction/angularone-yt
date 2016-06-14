@@ -49,11 +49,11 @@
             $rootScope.config = {
                 'url' : 'https://www.googleapis.com/youtube/v3/',
                 'key' : {
-                    'server' : 'AIzaSyDxk5yTYng29cRKRKCGwvlkIHbJMmbocjY',
-                    'browser' : 'AIzaSyA8WSCvmR8IkBk-wyiUmY_zqi4qTfCuDrs'
+                    'server' : '',
+                    'browser' : ''
                 },
                 'args' : {
-                    'channel_id' : 'UCRMokxzufyesqkXCL8IQxMA',
+                    'channel_id' : '',
                     'part`' : 'snippet',
                     'max_results' : 50
                 }
