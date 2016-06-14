@@ -5,8 +5,6 @@
     angular.module('services', []);
     angular.module('directives', []);
 
-    application.constant('KEY', {'server' : 'p3r]pojepjprt]r9t]04tu', 'browser' : ''});
-
     /* Routes */
     application.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider)
     {
@@ -46,7 +44,22 @@
                 templateUrl : "/templates/dropdown/other-action.html",
                 controller  : 'ActionController'
             });
-    }]);
+    }]).run(
+        function ($rootScope) {
+            $rootScope.config = {
+                'url' : 'https://www.googleapis.com/youtube/v3/',
+                'key' : {
+                    'server' : 'AIzaSyDxk5yTYng29cRKRKCGwvlkIHbJMmbocjY',
+                    'browser' : 'AIzaSyA8WSCvmR8IkBk-wyiUmY_zqi4qTfCuDrs'
+                },
+                'args' : {
+                    'channel_id' : 'UCRMokxzufyesqkXCL8IQxMA',
+                    'part`' : 'snippet',
+                    'max_results' : 50
+                }
 
+            };
+        }
+    );
 })();
 

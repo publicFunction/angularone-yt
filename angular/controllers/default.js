@@ -12,12 +12,9 @@
         };
     }]);
 
-    controllers.controller('DefaultController', ['$scope', '$state', '$http', 'homeService',
-        function ($scope, $state, $http, homeService) {
+    controllers.controller('DefaultController', ['$scope', '$state', '$http', '$rootScope', 'homeService',
+        function ($scope, $state, $http, $rootScope, homeService) {
             $scope.content = homeService.content();
-
-            console.debug($scope);
-            
             //$scope.videos = {};
             //$scope.videos = videosService.videos();
 
