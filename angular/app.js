@@ -13,37 +13,37 @@
         $stateProvider
             .state('/', {
                 url         : "",
-                templateUrl : "../templates/home.html",
+                templateUrl : "/templates/home.html",
                 controller  : 'DefaultController'
             })
             .state('schools', {
-                url         : "",
-                templateUrl : "./templates/school/index.html",
+                url         : "/schools",
+                templateUrl : "/templates/school/index.html",
                 controller  : 'SchoolController'
             })
             .state('schools-detail', {
                 url         : "/schools/:id",
-                templateUrl : "./templates/school/detail.html",
+                templateUrl : "/templates/school/detail.html",
                 controller  : 'SchoolViewController'
             })
-            .state('about', {
+            .state('/about', {
                 url         : "/about",
-                templateUrl : "./templates/about.html",
+                templateUrl : "/templates/about.html",
                 controller  : 'AboutController'
             })
             .state('contact', {
                 url         : "/contact",
-                templateUrl : "./templates/contact.html",
+                templateUrl : "/templates/contact.html",
                 controller  : 'ContactController'
             })
             .state('dropdown-action', {
                 url         : "/dropdown/action",
-                templateUrl : "./templates/dropdown/action.html",
+                templateUrl : "/templates/dropdown/action.html",
                 controller  : 'ActionController'
             })
             .state('dropdown-other-action', {
                 url         : "/dropdown/other-action",
-                templateUrl : "./templates/dropdown/other-action.html",
+                templateUrl : "/templates/dropdown/other-action.html",
                 controller  : 'ActionController'
             });
     }]);
