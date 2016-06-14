@@ -6,6 +6,7 @@
     <meta name="Author" content="Chris Moss, xDesign">
     <meta name="Access-Control-Allow-Origin" crossorigin="anonymous">
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link href="//bootswatch.com/slate/bootstrap.min.css" type="text/css" rel="stylesheet">
     <title>publicFunction</title>
 </head>
 <body>
@@ -24,7 +25,8 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li class="active" ng-class="{active:menu.getMenu('home')}"><a ng-click="menu.setMenu('home')" href="/#">Home</a></li>
-                    <li ng-class="{active: menu.getMenu('schools')}"><a ng-click="menu.setMenu('schools')" href="#/schools">Schools</a></li>
+                    <li ng-class="{active: menu.getMenu('schools')}"><a ng-click="menu.setMenu('schools')" href="#/playlists">Playlists</a></li>
+                    <li ng-class="{active: menu.getMenu('live')}"><a ng-click="menu.setMenu('live')" href="#/live">Live</a></li>
                     <li ng-class="{active: menu.getMenu('about')}"><a ng-click="menu.setMenu('about')" href="#/about">About</a></li>
                     <li ng-class="{active: menu.getMenu('contact')}"><a ng-click="menu.setMenu('contact')" href="#/contact">Contact</a></li>
                     <li class="dropdown">
@@ -42,10 +44,10 @@
 <div class="welcome container">
     <div ui-view class="view-animate container-fluid"></div>
 </div>
-<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
-<script src="https://code.jquery.com/ui/1.11.2/jquery-ui.min.js"></script>
+<script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
+<script src="//code.jquery.com/ui/1.11.2/jquery-ui.min.js"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.9/angular.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.9/angular.min.js"></script>
 <script src="/angular/app.js"></script>
 <script src="/angular/controllers/default.js"></script>
 <script src="/angular/services/default.js"></script>

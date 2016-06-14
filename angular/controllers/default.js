@@ -28,8 +28,8 @@
         }
     ]);
 
-    controllers.controller('SchoolController', ['$scope', '$state', '$http', 'videosService',
-        function ($scope, $state, $http, videosService) {
+    controllers.controller('PlaylistsController', ['$scope', '$state', '$http', 'PlaylistsService',
+        function ($scope, $state, $http, PlaylistsService) {
 
             /*$scope.schools = {};
             $scope.schools = dummyService.schools();

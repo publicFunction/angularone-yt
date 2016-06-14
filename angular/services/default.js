@@ -17,7 +17,7 @@
         }
     ]);
 
-    services.service('videosService', ['$http', '$resource', 'ApiUrl',
+    services.service('PlaylistsService', ['$http', '$resource', 'ApiUrl',
         function($http, $resource, ApiUrl) {
             return $resource(ApiUrl.url+'schools', {}, {
                 schools: {method:'GET', params:{}, isArray:true}

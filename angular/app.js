@@ -16,15 +16,15 @@
                 templateUrl : "/templates/home.html",
                 controller  : 'DefaultController'
             })
-            .state('schools', {
-                url         : "/schools",
-                templateUrl : "/templates/school/index.html",
-                controller  : 'SchoolController'
+            .state('playlists', {
+                url         : "/playlists",
+                templateUrl : "/templates/playlists/index.html",
+                controller  : 'PlaylistsController'
             })
-            .state('schools-detail', {
-                url         : "/schools/:id",
-                templateUrl : "/templates/school/detail.html",
-                controller  : 'SchoolViewController'
+            .state('playlist-detail', {
+                url         : "/playlists/:id",
+                templateUrl : "/templates/playlists/detail.html",
+                controller  : 'PlaylistsViewController'
             })
             .state('/about', {
                 url         : "/about",
