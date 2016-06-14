@@ -1,0 +1,24 @@
+<div class="container-fluid" ng-controller="SchoolController">
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>School Name</th>
+            <th>Account Status</th>
+            <th>Activity Status</th>
+            <th>&nbsp;</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="school in schools">
+            <td>{{school.id}}</td>
+            <td>{{school.name}}</td>
+            <td>{{school.account_status}}</td>
+            <td class="{{school.activity_status}}">{{school.activity_status}}</td>
+            <td>
+                <a ng-click="viewSchool(school.id)">View</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
