@@ -1,0 +1,14 @@
+.welcome {
+    min-height: 500px;
+    padding-bottom: 30px;
+}
+
+.footer {
+    &> div {
+        text-align: center;
+        &.twitter {
+            max-height: 195px;
+            overflow-y: scroll;
+        }
+    }
+}

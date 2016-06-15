@@ -1,0 +1,15 @@
+/* line 1, ../sass/style.scss */
+.welcome {
+  min-height: 500px;
+  padding-bottom: 30px;
+}
+
+/* line 7, ../sass/style.scss */
+.footer > div {
+  text-align: center;
+}
+/* line 9, ../sass/style.scss */
+.footer > div.twitter {
+  max-height: 195px;
+  overflow-y: scroll;
+}
