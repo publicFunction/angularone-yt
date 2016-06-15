@@ -2,13 +2,16 @@
 
     var controllers = angular.module('controllers', []);
 
-    controllers.controller('MenuController', [function() {
-        this.option = 'home';
-        this.setMenu = function(setMenu) {
-            this.option = setMenu;
+    controllers.controller('MenuController', ['$scope', '$state', function($scope, $state) {
+        //$scope.option = 'home';
+        this.setMenu = function(menu) {
+            $scope.option = menu;
         };
-        this.getMenu = function(getMenu) {
-            return this.option === getMenu;
+        this.getMenu = function(menu) {
+            console.log(menu);
+            if($scope.option == menu) {
+                return true;
+            }
         };
     }]);
 
