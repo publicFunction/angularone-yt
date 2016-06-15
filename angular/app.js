@@ -24,10 +24,15 @@
                 templateUrl : "/templates/playlists/detail.html",
                 controller  : 'PlaylistsViewController'
             })
-            .state('/about', {
+            .state('about', {
                 url         : "/about",
                 templateUrl : "/templates/about.html",
                 controller  : 'AboutController'
+            })
+            .state('live', {
+                url         : "/live",
+                templateUrl : "/templates/live/index.html",
+                controller  : 'LiveController'
             })
             .state('contact', {
                 url         : "/contact",
@@ -47,7 +52,7 @@
     }]).run(
         function ($rootScope) {
             $rootScope.config = {
-                'url' : 'https://www.googleapis.com/youtube/v3/',
+                'url' : '//www.googleapis.com/youtube/v3/',
                 'key' : {
                     'server' : '',
                     'browser' : ''

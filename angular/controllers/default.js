@@ -25,6 +25,12 @@
         }
     ]);
 
+    controllers.controller('LiveController', ['$scope', '$state', '$http', '$rootScope',
+        function ($scope, $state, $http, $rootScope) {
+
+        }
+    ]);
+
     controllers.controller('PlaylistsController', ['$scope', '$state', '$http', 'PlaylistsService',
         function ($scope, $state, $http, PlaylistsService) {
 
