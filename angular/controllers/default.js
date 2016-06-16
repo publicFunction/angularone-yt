@@ -8,7 +8,6 @@
             $scope.option = menu;
         };
         this.getMenu = function(menu) {
-            console.log(menu);
             if($scope.option == menu) {
                 return true;
             }
