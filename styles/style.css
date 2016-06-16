@@ -10,6 +10,6 @@
 }
 /* line 9, ../sass/style.scss */
 .footer > div.twitter {
-  max-height: 195px;
+  max-height: 425px;
   overflow-y: scroll;
 }
