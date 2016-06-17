@@ -3,12 +3,11 @@
     var controllers = angular.module('controllers', []);
 
     controllers.controller('MenuController', ['$scope', '$state', function($scope, $state) {
-        //$scope.option = 'home';
         this.setMenu = function(menu) {
-            $scope.option = menu;
+            localStorage.setItem('menu', menu);
         };
         this.getMenu = function(menu) {
-            if($scope.option == menu) {
+            if(localStorage.getItem('menu') == menu) {
                 return true;
             }
         };
