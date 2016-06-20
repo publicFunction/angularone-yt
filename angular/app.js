@@ -20,9 +20,9 @@
                 controller  : 'PlaylistsController'
             })
             .state('playlist-detail', {
-                url         : "/playlists/:id",
+                url         : "/playlist/:id",
                 templateUrl : "/templates/playlists/detail.html",
-                controller  : 'PlaylistsViewController'
+                controller  : 'PlaylistViewController'
             })
             .state('about', {
                 url         : "/about",
@@ -52,14 +52,14 @@
     }]).run(
         function ($rootScope) {
             $rootScope.config = {
-                'url' : '//www.googleapis.com/youtube/v3/',
+                'url' : 'https://www.googleapis.com/youtube/v3/',
                 'key' : {
                     'server' : 'AIzaSyDxk5yTYng29cRKRKCGwvlkIHbJMmbocjY',
                     'browser' : 'AIzaSyA8WSCvmR8IkBk-wyiUmY_zqi4qTfCuDrs'
                 },
                 'args' : {
                     'channel_id' : 'UCRMokxzufyesqkXCL8IQxMA',
-                    'part`' : 'snippet',
+                    'part' : 'snippet',
                     'max_results' : 50
                 }
 

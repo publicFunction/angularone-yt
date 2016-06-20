@@ -17,7 +17,6 @@
 
     services.service('homeService', ['$http', '$resource', 'Api', '$rootScope',
         function($http, $resource, Api, $rootScope) {
-            console.debug(Api.getArgs());
             return $resource(Api.getApiUrl(), {}, {
                 content : {method: 'GET', params: {}, isArray: false}
             });
@@ -26,16 +25,29 @@
 
     services.service('PlaylistsService', ['$http', '$resource', 'Api',
         function($http, $resource, Api) {
-            return $resource(Api.getApiUrl()+'schools', {}, {
-                schools: {method:'GET', params:{}, isArray:true}
+            var default_args = Api.getArgs();
+            var data = {
+                'part' : default_args.part,
+                'channelId' : default_args.channel_id,
+                'maxResults' : default_args.max_results,
+                'key' : Api.config.key.server
+            };
+            return $resource(Api.getApiUrl()+'playlists', data, {
+                playlists: {method:'GET', params: data, isArray: false}
             });
         }
     ]);
 
-    services.service('dummyServiceView', ['$http', '$resource', '$state', 'Api',
-        function($http, $resource, $state, ApiUrl) {
-            return $resource(Api.getApiUrl()+'schools/'+$state.params.id, {}, {
-                school: {method:'GET', params:{}, isArray: false}
+    services.service('PlaylistServiceView', ['$http', '$resource', '$state', '$stateParams', 'Api',
+        function($http, $resource, $state, $stateParams, Api) {
+            var data = {
+                'part' : Api.config.args.part,
+                'playlistId' : $stateParams.id,
+                'maxResults' : Api.config.args.max_results,
+                'key' : Api.config.key.server
+            };
+            return $resource(Api.getApiUrl()+'playlistItems', data, {
+                playlist: {method:'GET', params: data, isArray: false}
             });
         }
     ]);

@@ -35,23 +35,22 @@
     controllers.controller('PlaylistsController', ['$scope', '$state', '$http', 'PlaylistsService',
         function ($scope, $state, $http, PlaylistsService) {
 
-            /*$scope.schools = {};
-            $scope.schools = dummyService.schools();
+            $scope.playlists = {};
+            $scope.playlists = PlaylistsService.playlists();
 
-            $scope.viewSchool = function($id) {
-                $state.transitionTo('schools-detail', {id : $id});
-            }*/
+            $scope.viewPlaylist = function($id) {
+                $state.transitionTo('playlist-detail', {playlist_id : $id});
+            }
 
         }
     ]);
 
-    controllers.controller('SchoolViewController',
-        ['$scope', '$state', '$stateParams', '$http', 'dummyServiceView', 'setMenu',
-        function ($scope, $state, $stateParams, $http, dummyServiceView, setMenu) {
-            $scope.school = {};
-            $scope.school.id = $stateParams.id;
-            setMenu.setMenu('school');
-            $scope.school = dummyServiceView.school();
+    controllers.controller('PlaylistViewController',
+        ['$scope', '$state', '$stateParams', '$http', 'PlaylistServiceView',
+        function ($scope, $state, $stateParams, $http, PlaylistServiceView) {
+            $scope.playlist = {};
+            $scope.playlist.playlist_id = $stateParams.playlist_id;
+            $scope.playlist = PlaylistServiceView.playlist();
 
         }
     ]);

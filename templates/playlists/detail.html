@@ -1,3 +1,13 @@
-<div class="container-fluid" ng-controller="SchoolViewController">
-    {{school}}
+<div class="container-fluid playlist" ng-controller="PlaylistViewController">
+    <h1>{{'Playlist'}}</h1>
+    <div>
+        <section>
+            <article ng-repeat="item in playlist.items">
+                <img src="{{item.snippet.thumbnails.medium.url}}" width="{{item.snippet.thumbnails.medium.width}}" height="{{item.snippet.thumbnails.medium.height}}" alt="Thumbnail {{item.snippet.title}}" />
+                <h2>{{item.snippet.title}}</h2>
+                <p>{{item.snippet.description}}</p>
+                <a ng-href="#/video/{{item.snippet.resourceId.videoId}}"></a>
+            </article>
+        </section>
+    </div>
 </div>

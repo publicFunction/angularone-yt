@@ -1,3 +1,12 @@
-<div class="container-fluid" ng-controller="PlaylistsController">
-    {{'Playlists Index'}}
+<div class="container-fluid playlists" ng-controller="PlaylistsController">
+    <h1>{{'Playlists'}}</h1>
+    <div>
+        <section>
+            <article ng-repeat="item in playlists.items">
+                <img src="{{item.snippet.thumbnails.medium.url}}" width="{{item.snippet.thumbnails.medium.width}}" height="{{item.snippet.thumbnails.medium.height}}" alt="Thumbnail {{item.snippet.title}}" />
+                <h2>{{item.snippet.title}}</h2>
+                <a ng-href="#/playlist/{{item.id}}"></a>
+            </article>
+        </section>
+    </div>
 </div>
