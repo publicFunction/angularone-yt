@@ -51,8 +51,9 @@
             });
     }]).run(
         function ($rootScope) {
-            var config_data = JSON.parse(app_config);
-            $rootScope.config = config_data;
+            $.getJSON('/angular/config.json', function(response) {
+                $rootScope.config = response;
+            });
         }
     );
 })();
