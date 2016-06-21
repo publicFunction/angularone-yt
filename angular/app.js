@@ -51,6 +51,7 @@
             });
     }]).run(
         function ($rootScope) {
+            var config_data;
             $rootScope.config = {
                 'url' : 'https://www.googleapis.com/youtube/v3/',
                 'key' : {
