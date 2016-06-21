@@ -51,20 +51,8 @@
             });
     }]).run(
         function ($rootScope) {
-            var config_data;
-            $rootScope.config = {
-                'url' : 'https://www.googleapis.com/youtube/v3/',
-                'key' : {
-                    'server' : 'AIzaSyDxk5yTYng29cRKRKCGwvlkIHbJMmbocjY',
-                    'browser' : 'AIzaSyA8WSCvmR8IkBk-wyiUmY_zqi4qTfCuDrs'
-                },
-                'args' : {
-                    'channel_id' : 'UCRMokxzufyesqkXCL8IQxMA',
-                    'part' : 'snippet',
-                    'max_results' : 50
-                }
-
-            };
+            var config_data = JSON.parse(app_config);
+            $rootScope.config = config_data;
         }
     );
 })();
