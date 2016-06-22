@@ -50,7 +50,10 @@
                 controller  : 'ActionController'
             });
     }]).run(
-        function ($rootScope) {
+        function ($rootScope, $templateCache) {
+            $rootScope.$on('$viewContentLoaded', function() {
+                $templateCache.removeAll();
+            });
             $.getJSON('/angular/config.json', function(response) {
                 $rootScope.config = response;
             });
