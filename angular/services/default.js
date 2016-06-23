@@ -17,7 +17,8 @@
 
     services.service('latestVideoService', ['$http', '$resource', 'Api', '$rootScope',
         function($http, $resource, Api, $rootScope) {
-
+            var api_args = Api.getArgs();
+            var api_config = Api.config;
             return {
                 getFeaturedVideo : function() {
                     //https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCRMokxzufyesqkXCL8IQxMA&maxResults=5&order=date&type=video&key={YOUR_API_KEY}
@@ -26,6 +27,15 @@
                     //https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCRMokxzufyesqkXCL8IQxMA&maxResults=10&order=date&type=video&key={YOUR_API_KEY}
                 },
                 getLatestActivity: function() {
+                    var params = {
+                        "part" : api_args.part,
+                        "maxResults" : api_args.max_results,
+                        "channelId" : api_args.channel_id,
+                        "key" : Api.config.key.browser
+                    };
+                    return $resource(Api.getApiUrl()+'activities', params, {
+                        activities : {method: 'GET', params: params, isArray: false}
+                    });
                     //https://www.googleapis.com/youtube/v3/activities?part=snippet&maxResults=20&mine=true&key={YOUR_API_KEY}
                 }
             };
