@@ -1,17 +1,14 @@
 (function(){
 
     var app_config;
-    var application = angular.module('boilerplate', ['controllers', 'services', 'directives', 'ui.router', 'ngCookies']);
-    var routerApp = angular.module('routerApp', ['ui.router']);
+    var application = angular.module('boilerplate', ['controllers', 'services', 'directives', 'ngCookies', 'ui.router']);
 
     angular.module('controllers', []);
     angular.module('services', []);
     angular.module('directives', []);
 
-
-
     /* Routes */
-    routerApp.config(function($stateProvider, $urlRouterProvider) {
+    application.config(function($stateProvider, $urlRouterProvider) {
 
         $urlRouterProvider.otherwise('/');
 
@@ -26,7 +23,7 @@
                 templateUrl : "/templates/playlists/index.html",
                 controller  : 'PlaylistsController'
             })
-            .state('playlist.details', {
+            .state('playlist-details', {
                 url         : "/playlist/:id",
                 templateUrl : "/templates/playlists/detail.html",
                 controller  : 'PlaylistViewController'
@@ -56,7 +53,7 @@
                 templateUrl : "/templates/dropdown/other-action.html",
                 controller  : 'ActionController'
             });
-    })
+        })
         .run(
         function ($rootScope, $templateCache) {
             $rootScope.$on('$viewContentLoaded', function() {
@@ -67,7 +64,6 @@
                 app_config = JSON.parse(jsonString);
                 $rootScope.config = app_config;
             });
-        }
-    );
+        });
 })();
 

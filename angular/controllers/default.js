@@ -15,7 +15,7 @@
 
     controllers.controller('DefaultController', ['$scope', '$state', '$http', '$rootScope', 'homeService',
         function ($scope, $state, $http, $rootScope, homeService) {
-            $scope.content = homeService.content();
+            //$scope.content = homeService.content();
 
             //$scope.videos = {};
             //$scope.videos = videosService.videos();
@@ -43,6 +43,7 @@
     controllers.controller('PlaylistViewController',
         ['$scope', '$state', '$stateParams', '$http', 'PlaylistServiceView',
         function ($scope, $state, $stateParams, $http, PlaylistServiceView) {
+
             $scope.playlist = {};
             $scope.playlist = PlaylistServiceView.playlist();
         }

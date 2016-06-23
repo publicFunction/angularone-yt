@@ -47,23 +47,6 @@
                 'key' : Api.config.key.server
             };
 
-            console.log(data);
-
-            /*{
-                getData: function () {
-                    return data;
-                },
-                getServices : function (tag) {
-                    var defer = $q.defer();
-                    $http.get('/api/service?searchTerm=' + tag).then(function (response) {
-                        data = response;
-                        defer.resolve(response);
-                    });
-                    return defer.promise;
-                }
-            }*/
-
-
             return $resource(Api.getApiUrl()+'playlistItems', data, {
                 playlist: {method:'GET', params: data, isArray: false}
             });
