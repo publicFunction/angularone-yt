@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="boilerplate">
+<html lang="en" ng-app="boilerplate" manifest="app.appcache">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,12 +21,12 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" ng-class="{active: menu.getMenu('home')}" ng-click="menu.setMenu('home')" href="#">{publicFunction}</a>
+                        <a class="navbar-brand" ng-class="{active: menu.getMenu('home')}" ng-click="menu.setMenu('home')" ui-sref="home">{publicFunction}</a>
                     </div>
                     <div class="navbar-collapse collapse">
                         <ul class="nav navbar-nav">
-                            <li ng-class="{active: menu.getMenu('home')}"><a ng-click="menu.setMenu('home')" href="/#">Home</a></li>
-                            <li ng-class="{active: menu.getMenu('playlists')}"><a ng-click="menu.setMenu('playlists')" href="#/playlists">Playlists</a></li>
+                            <li ng-class="{active: menu.getMenu('home')}"><a ng-click="menu.setMenu('home')" ui-sref="home">Home</a></li>
+                            <!--<li ng-class="{active: menu.getMenu('playlists')}"><a ng-click="menu.setMenu('playlists')" ui-sref="playlists" >Playlists</a></li>
                             <li ng-class="{active: menu.getMenu('live')}"><a ng-click="menu.setMenu('live')" href="#/live">Live</a></li>
                             <li ng-class="{active: menu.getMenu('about')}"><a ng-click="menu.setMenu('about')" href="#/about">About</a></li>
                             <li ng-class="{active: menu.getMenu('contact')}"><a ng-click="menu.setMenu('contact')" href="#/contact">Contact</a></li>
@@ -36,7 +36,7 @@
                                     <li><a href="#/dropdown/action">Action</a></li>
                                     <li><a href="#/dropdown/other-action">Another action</a></li>
                                 </ul>
-                            </li>
+                            </li>-->
                         </ul>
                     </div><!--/.nav-collapse -->
                 </div>

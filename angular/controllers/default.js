@@ -16,6 +16,7 @@
     controllers.controller('DefaultController', ['$scope', '$state', '$http', '$rootScope', 'homeService',
         function ($scope, $state, $http, $rootScope, homeService) {
             $scope.content = homeService.content();
+
             //$scope.videos = {};
             //$scope.videos = videosService.videos();
 
@@ -34,14 +35,8 @@
 
     controllers.controller('PlaylistsController', ['$scope', '$state', '$http', 'PlaylistsService',
         function ($scope, $state, $http, PlaylistsService) {
-
             $scope.playlists = {};
             $scope.playlists = PlaylistsService.playlists();
-
-            $scope.viewPlaylist = function($id) {
-                $state.transitionTo('playlist-detail', {playlist_id : $id});
-            }
-
         }
     ]);
 
@@ -49,9 +44,7 @@
         ['$scope', '$state', '$stateParams', '$http', 'PlaylistServiceView',
         function ($scope, $state, $stateParams, $http, PlaylistServiceView) {
             $scope.playlist = {};
-            $scope.playlist.playlist_id = $stateParams.playlist_id;
             $scope.playlist = PlaylistServiceView.playlist();
-
         }
     ]);
 

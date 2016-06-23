@@ -1,16 +1,23 @@
 (function(){
 
+    var app_config;
     var application = angular.module('boilerplate', ['controllers', 'services', 'directives', 'ui.router', 'ngCookies']);
+    var routerApp = angular.module('routerApp', ['ui.router']);
+
     angular.module('controllers', []);
     angular.module('services', []);
     angular.module('directives', []);
 
+
+
     /* Routes */
-    application.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider)
-    {
+    routerApp.config(function($stateProvider, $urlRouterProvider) {
+
+        $urlRouterProvider.otherwise('/');
+
         $stateProvider
-            .state('/', {
-                url         : "",
+            .state('home', {
+                url         : "/",
                 templateUrl : "/templates/home.html",
                 controller  : 'DefaultController'
             })
@@ -19,7 +26,7 @@
                 templateUrl : "/templates/playlists/index.html",
                 controller  : 'PlaylistsController'
             })
-            .state('playlist-detail', {
+            .state('playlist.details', {
                 url         : "/playlist/:id",
                 templateUrl : "/templates/playlists/detail.html",
                 controller  : 'PlaylistViewController'
@@ -49,13 +56,16 @@
                 templateUrl : "/templates/dropdown/other-action.html",
                 controller  : 'ActionController'
             });
-    }]).run(
+    })
+        .run(
         function ($rootScope, $templateCache) {
             $rootScope.$on('$viewContentLoaded', function() {
                 $templateCache.removeAll();
             });
             $.getJSON('/angular/config.json', function(response) {
-                $rootScope.config = response;
+                var jsonString = JSON.stringify(response[0]);
+                app_config = JSON.parse(jsonString);
+                $rootScope.config = app_config;
             });
         }
     );

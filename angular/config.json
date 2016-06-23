@@ -1,12 +1,12 @@
-{
-    "url": "https://www.googleapis.com/youtube/v3/",
-    "key": {
-        "server": "",
-        "browser": ""
+[{
+    "url" : "https://www.googleapis.com/youtube/v3/",
+    "key" : {
+        "server" : "AIzaSyDxk5yTYng29cRKRKCGwvlkIHbJMmbocjY",
+        "browser" : "AIzaSyA8WSCvmR8IkBk-wyiUmY_zqi4qTfCuDrs"
     },
-    "args": {
-        "channel_id": "",
-        "part": "snippet",
-        "max_results": 50
+    "args" : {
+        "channel_id" : "UCRMokxzufyesqkXCL8IQxMA",
+        "part" : "snippet",
+        "max_results" : 50
     }
-}
+}]
