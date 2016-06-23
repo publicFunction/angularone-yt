@@ -40,16 +40,24 @@
 
     services.service('PlaylistServiceView', ['$http', '$resource', '$state', '$stateParams', 'Api',
         function($http, $resource, $state, $stateParams, Api) {
+
             var data = {
                 'part' : Api.config.args.part,
-                'playlistId' : $state.params.id,
+                'playlistId' : $stateParams.id,
                 'maxResults' : Api.config.args.max_results,
                 'key' : Api.config.key.server
             };
 
-            return $resource(Api.getApiUrl()+'playlistItems', data, {
-                playlist: {method:'GET', params: data, isArray: false}
-            });
+            return {
+                setPlaylistId: function(playlist_id) {
+                    data.playlistId = playlist_id;
+                },
+                getPlaylistContent: function () {
+                    return $resource(Api.getApiUrl()+'playlistItems', data, {
+                                playlist: {method:'GET', params: data, isArray: false}
+                            });
+                }
+            }
         }
     ]);
 

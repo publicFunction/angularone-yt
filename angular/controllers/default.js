@@ -44,8 +44,11 @@
         ['$scope', '$state', '$stateParams', '$http', 'PlaylistServiceView',
         function ($scope, $state, $stateParams, $http, PlaylistServiceView) {
 
+            PlaylistServiceView.setPlaylistId($stateParams.id);
+
             $scope.playlist = {};
-            $scope.playlist = PlaylistServiceView.playlist();
+            $scope.playlist = PlaylistServiceView.getPlaylistContent().playlist();
+
         }
     ]);
 
