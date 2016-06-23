@@ -20,13 +20,16 @@
 
             return {
                 getFeaturedVideo : function() {
-
+                    //https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCRMokxzufyesqkXCL8IQxMA&maxResults=5&order=date&type=video&key={YOUR_API_KEY}
                 },
                 getLatestVideos: function() {
-
+                    //https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCRMokxzufyesqkXCL8IQxMA&maxResults=10&order=date&type=video&key={YOUR_API_KEY}
+                },
+                getLatestActivity: function() {
+                    //https://www.googleapis.com/youtube/v3/activities?part=snippet&maxResults=20&mine=true&key={YOUR_API_KEY}
                 }
-            }
-            
+            };
+
             /*return $resource(Api.getApiUrl(), {}, {
                 content : {method: 'GET', params: {}, isArray: false}
             });*/

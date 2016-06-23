@@ -22,6 +22,9 @@
             $scope.latest = {};
             $scope.latest = latestVideoService.getLatestVideos();
 
+            $scope.activity = {};
+            $scope.activity = latestVideoService.getLatestActivity();
+
         }
     ]);
 
