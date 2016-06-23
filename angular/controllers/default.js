@@ -13,16 +13,14 @@
         };
     }]);
 
-    controllers.controller('DefaultController', ['$scope', '$state', '$http', '$rootScope', 'homeService',
-        function ($scope, $state, $http, $rootScope, homeService) {
-            //$scope.content = homeService.content();
+    controllers.controller('DefaultController', ['$scope', '$state', '$http', '$rootScope', 'latestVideoService',
+        function ($scope, $state, $http, $rootScope, latestVideoService) {
 
-            //$scope.videos = {};
-            //$scope.videos = videosService.videos();
+            $scope.featured = {};
+            $scope.featured = latestVideoService.getFeaturedVideo();
 
-            //$scope.viewSchool = function($id) {
-            //    $state.transitionTo('schools-detail', {id : $id});
-            //}
+            $scope.latest = {};
+            $scope.latest = latestVideoService.getLatestVideos();
 
         }
     ]);

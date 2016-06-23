@@ -15,11 +15,21 @@
         };
     });
 
-    services.service('homeService', ['$http', '$resource', 'Api', '$rootScope',
+    services.service('latestVideoService', ['$http', '$resource', 'Api', '$rootScope',
         function($http, $resource, Api, $rootScope) {
-            return $resource(Api.getApiUrl(), {}, {
+
+            return {
+                getFeaturedVideo : function() {
+
+                },
+                getLatestVideos: function() {
+
+                }
+            }
+            
+            /*return $resource(Api.getApiUrl(), {}, {
                 content : {method: 'GET', params: {}, isArray: false}
-            });
+            });*/
         }
     ]);
 
