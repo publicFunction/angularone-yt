@@ -59,8 +59,8 @@
             $scope.playlist = PlaylistServiceView.getPlaylistContent().playlist();
 
             $scope.playlist_title = {};
-            if(localStorage.getItem('menu')) {
-                $scope.playlist_title = localStorage.getItem('playlist_title')+' Playlist';
+            if(localStorage.getItem('playlist_title')) {
+                $scope.playlistTitle = localStorage.getItem('playlist_title')+' Playlist';
             }
 
         }
