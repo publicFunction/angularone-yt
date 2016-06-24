@@ -1,13 +1,20 @@
 (function() {
 
     angular.module('directives', [])
-        .directive('embedIframe', function() {
-            console.debug("CALLED");
-            return {
-                //template : "<iframe height='480' src='{{Api.getEmbedUrl(video.id.videoId)}}' frameborder='0' allowfullscreen></iframe>"
-                template : "Hello World!",
-                controller: DefaultController
-            };
+        .directive('embedIframe', function(Api) {
+            /*return {
+                restrict: 'E',
+                scope : {
+                    videoId : '@videoId'
+                },
+                template : function(elem, attr) {
+                    console.log(elem);
+                    console.log(attr);
+
+
+                    return '<iframe height="480" src="{{attr.videoId}}" frameborder="0" allowfullscreen></iframe>'
+                }
+            };*/
         });
 
 })();

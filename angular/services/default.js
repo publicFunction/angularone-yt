@@ -12,8 +12,8 @@
             getArgs : function () {
                 return $rootScope.config.args;
             },
-            getEmbedUrl : function(video_id) {
-                return $rootScope.config.embed_url+video_id;
+            getEmbedUrl : function() {
+                return $rootScope.config.embed_url;
             }
         };
     });
@@ -22,6 +22,9 @@
         function($http, $resource, Api, $rootScope) {
             var api_args = Api.getArgs();
             return {
+                getEmbedUrl : function() {
+                    return Api.getEmbedUrl();
+                },
                 getFeaturedVideo : function() {
                     var params = {
                         "part" : api_args.part,

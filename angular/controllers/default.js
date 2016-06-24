@@ -25,6 +25,10 @@
             $scope.activity = {};
             $scope.activities = latestVideoService.getLatestActivity().activities();
 
+            $scope.getIframeSrc = function (videoId) {
+                return latestVideoService.getEmbedUrl()+videoId;
+            }
+
         }
     ]);
 

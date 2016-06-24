@@ -4,9 +4,13 @@
     var application = angular.module('boilerplate', ['controllers', 'services', 'directives', 'ngCookies', 'ui.router']);
 
     /* Routes */
-    application.config(function($stateProvider, $urlRouterProvider) {
+    application.config(function($stateProvider, $urlRouterProvider, $sceDelegateProvider) {
 
         $urlRouterProvider.otherwise('/');
+
+        $sceDelegateProvider.resourceUrlWhitelist([
+            'self',
+            'https://www.youtube.com/**']);
 
         $stateProvider
             .state('home', {

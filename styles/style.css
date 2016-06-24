@@ -74,10 +74,11 @@ section.featured article div {
 }
 /* line 69, ../sass/style.scss */
 section.featured article div.feature {
-  width: 100%;
+  width: 87.5%;
   height: 480px;
+  margin: 0 auto;
 }
-/* line 72, ../sass/style.scss */
+/* line 73, ../sass/style.scss */
 section.featured article div.feature iframe {
   position: relative;
   width: 100%;
@@ -85,16 +86,16 @@ section.featured article div.feature iframe {
   top: 0;
   left: auto;
 }
-/* line 81, ../sass/style.scss */
+/* line 82, ../sass/style.scss */
 section.featured article p {
   margin: 20px 0;
 }
 
-/* line 89, ../sass/style.scss */
+/* line 90, ../sass/style.scss */
 .footer > div {
   text-align: center;
 }
-/* line 91, ../sass/style.scss */
+/* line 92, ../sass/style.scss */
 .footer > div.twitter {
   max-height: 425px;
   overflow-y: scroll;

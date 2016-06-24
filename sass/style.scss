@@ -67,8 +67,9 @@ section {
             div {
                 width: 100%;
                 &.feature {
-                    width: 100%;
+                    width: 87.5%;
                     height: 480px;
+                    margin: 0 auto;
                     iframe {
                         position: relative;
                         width: 100%;

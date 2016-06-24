@@ -6,16 +6,16 @@
         <section class="featured">
             <h2>Todays Featured Video</h2>
             <article ng-repeat="(index, video) in featured.items">
-                <h2>{{video.snippet.title}} {{video.id.videoId}}</h2>
-                <div class="feature">
-
+                <h2>{{video.snippet.title}}</h2>
+                <div class="feature" data-video="{{embedurl}}{{video.id.videoId}}">
+                    <iframe height="480" ng-src="{{getIframeSrc(video.id.videoId)}}" frameborder="0" allowfullscreen></iframe>
                 </div>
                 <p>{{video.snippet.description}}</p>
             </article>
         </section>
         <section class="latest">
             <h2>My Latest Content</h2>
-            <article ng-repeat="(index, video) in latest.items" style="back">
+            <article ng-repeat="(index, video) in latest.items" style="background: url('{{video.snippet.thumbnails.medium.url}}');">
                 <h2>{{video.snippet.title}}</h2>
                 <p>{{video.snippet.description}}</p>
             </article>
