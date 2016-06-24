@@ -13,14 +13,14 @@
         };
     }]);
 
-    controllers.controller('DefaultController', ['$scope', '$state', '$http', '$rootScope', 'latestVideoService',
-        function ($scope, $state, $http, $rootScope, latestVideoService) {
+    controllers.controller('DefaultController', ['$scope', '$state', '$http', '$rootScope', 'latestVideoService', 'Api',
+        function ($scope, $state, $http, $rootScope, latestVideoService, Api) {
 
             $scope.featured = {};
-            $scope.featured = latestVideoService.getFeaturedVideo();
+            $scope.featured = latestVideoService.getFeaturedVideo().collection();
 
             $scope.latest = {};
-            $scope.latest = latestVideoService.getLatestVideos();
+            $scope.latest = latestVideoService.getLatestVideos().collection();
 
             $scope.activity = {};
             $scope.activities = latestVideoService.getLatestActivity().activities();

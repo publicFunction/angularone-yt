@@ -1,8 +1,8 @@
-<a href='https://github.com/angular/angular.js/edit/v1.5.x/src/ngResource/resource.js?message=docs($resource)%3A%20describe%20your%20change...#L62' class='improve-docs btn btn-primary'><i class="glyphicon glyphicon-edit">&nbsp;</i>Improve this Doc</a>
+<a href='https://github.com/angular/angular.js/edit/v1.5.x/src/ngResource/resource.js?message=docs($resource)%3A%20describe%20your%20change...#L76' class='improve-docs btn btn-primary'><i class="glyphicon glyphicon-edit">&nbsp;</i>Improve this Doc</a>
 
 
 
-<a href='https://github.com/angular/angular.js/tree/v1.5.6/src/ngResource/resource.js#L62' class='view-source pull-right btn btn-primary'>
+<a href='https://github.com/angular/angular.js/tree/v1.5.7/src/ngResource/resource.js#L76' class='view-source pull-right btn btn-primary'>
   <i class="glyphicon glyphicon-zoom-in">&nbsp;</i>View Source
 </a>
 
@@ -11,7 +11,9 @@
   <h1 class="api-profile-header-heading">$resource</h1>
   <ol class="api-profile-header-structure naked-list step-list">
     
-  
+  <li>
+    <a href="api/ngResource/provider/$resourceProvider">- $resourceProvider</a>
+  </li>
 
     <li>
       - service in module <a href="api/ngResource">ngResource</a>
@@ -286,6 +288,13 @@ returned by the interceptor.</p>
 </li>
 <li><p><code>$cancelRequest</code>: If there is a cancellable, pending request related to the instance or
  collection, calling this method will abort the request.</p>
+<p>The Resource instances have these additional methods:</p>
+</li>
+<li><p><code>toJSON</code>: It returns a simple object without any of the extra properties added as part of
+the Resource API. This object can be serialized through <a href="api/ng/function/angular.toJson"><code>angular.toJson</code></a> safely
+without attaching Angular-specific fields. Notice that <code>JSON.stringify</code> (and
+<code>angular.toJson</code>) automatically use this method when serializing a Resource instance
+(see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify#toJSON(">MDN</a>_behavior)).</p>
 </li>
 </ul>
 </td>

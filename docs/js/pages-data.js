@@ -1846,6 +1846,11 @@ angular.module('pagesData', [])
     "area": "api",
     "path": "api/ngResource"
   },
+  "api/ngResource/provider/$resourceProvider": {
+    "name": "$resourceProvider",
+    "area": "api",
+    "path": "api/ngResource/provider/$resourceProvider"
+  },
   "api/ngResource/service/$resource": {
     "name": "$resource",
     "area": "api",
@@ -2511,8 +2516,26 @@ angular.module('pagesData', [])
   "examples/example-example103": {
     "path": "examples/example-example103"
   },
+  "examples/example-orderBy-static": {
+    "path": "examples/example-orderBy-static"
+  },
+  "examples/example-orderBy-dynamic": {
+    "path": "examples/example-orderBy-dynamic"
+  },
+  "examples/example-orderBy-call-manually": {
+    "path": "examples/example-orderBy-call-manually"
+  },
+  "examples/example-orderBy-custom-comparator": {
+    "path": "examples/example-orderBy-custom-comparator"
+  },
+  "http-hello.html": {
+    "path": "http-hello.html"
+  },
   "examples/example-example104": {
     "path": "examples/example-example104"
+  },
+  "examples/example-custom-interpolation-markup": {
+    "path": "examples/example-custom-interpolation-markup"
   },
   "examples/example-example105": {
     "path": "examples/example-example105"
@@ -2520,32 +2543,17 @@ angular.module('pagesData', [])
   "examples/example-example106": {
     "path": "examples/example-example106"
   },
-  "http-hello.html": {
-    "path": "http-hello.html"
-  },
   "examples/example-example107": {
     "path": "examples/example-example107"
   },
-  "examples/example-custom-interpolation-markup": {
-    "path": "examples/example-custom-interpolation-markup"
+  "test_data.json": {
+    "path": "test_data.json"
   },
   "examples/example-example108": {
     "path": "examples/example-example108"
   },
   "examples/example-example109": {
     "path": "examples/example-example109"
-  },
-  "examples/example-example110": {
-    "path": "examples/example-example110"
-  },
-  "test_data.json": {
-    "path": "test_data.json"
-  },
-  "examples/example-example111": {
-    "path": "examples/example-example111"
-  },
-  "examples/example-example112": {
-    "path": "examples/example-example112"
   },
   "examples/example-ngAnimateChildren": {
     "path": "examples/example-ngAnimateChildren"
@@ -2586,20 +2594,20 @@ angular.module('pagesData', [])
   "examples/example-$route-service": {
     "path": "examples/example-$route-service"
   },
+  "examples/example-example110": {
+    "path": "examples/example-example110"
+  },
+  "examples/example-example111": {
+    "path": "examples/example-example111"
+  },
+  "examples/example-example112": {
+    "path": "examples/example-example112"
+  },
   "examples/example-example113": {
     "path": "examples/example-example113"
   },
   "examples/example-example114": {
     "path": "examples/example-example114"
-  },
-  "examples/example-example115": {
-    "path": "examples/example-example115"
-  },
-  "examples/example-example116": {
-    "path": "examples/example-example116"
-  },
-  "examples/example-example117": {
-    "path": "examples/example-example117"
   },
   "error/$animate": {
     "name": "$animate",
@@ -2854,6 +2862,11 @@ angular.module('pagesData', [])
     "name": "service components in ngMockE2E",
     "area": "api",
     "path": "api/ngMockE2E/service"
+  },
+  "api/ngResource/provider": {
+    "name": "provider components in ngResource",
+    "area": "api",
+    "path": "api/ngResource/provider"
   },
   "api/ngResource/service": {
     "name": "service components in ngResource",

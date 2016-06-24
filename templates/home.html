@@ -1,7 +1,32 @@
 <div class="container-fluid">
-    
-    {{'Home Page'}}
+    <header>
 
-    {{activities}}
+    </header>
+    <div>
+        <section class="featured">
+            <h2>Todays Featured Video</h2>
+            <article ng-repeat="(index, video) in featured.items">
+                <h2>{{video.snippet.title}} {{video.id.videoId}}</h2>
+                <div class="feature">
 
+                </div>
+                <p>{{video.snippet.description}}</p>
+            </article>
+        </section>
+        <section class="latest">
+            <h2>My Latest Content</h2>
+            <article ng-repeat="(index, video) in latest.items" style="back">
+                <h2>{{video.snippet.title}}</h2>
+                <p>{{video.snippet.description}}</p>
+            </article>
+        </section>
+        <section class="activity">
+            <h2>My Latest Activity</h2>
+            <article ng-repeat="activity in activities.items">
+                <span class="type">{{activity.snippet.type.charAt(0).toUpperCase() + activity.snippet.type.slice(1)}}</span>
+                <h2>{{activity.snippet.title}}</h2>
+                <p>{{activity.snippet.description}}</p>
+            </article>
+        </section>
+    </div>
 </div>

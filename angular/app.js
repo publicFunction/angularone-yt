@@ -3,10 +3,6 @@
     var app_config;
     var application = angular.module('boilerplate', ['controllers', 'services', 'directives', 'ngCookies', 'ui.router']);
 
-    angular.module('controllers', []);
-    angular.module('services', []);
-    angular.module('directives', []);
-
     /* Routes */
     application.config(function($stateProvider, $urlRouterProvider) {
 
