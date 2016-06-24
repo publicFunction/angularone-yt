@@ -3,6 +3,25 @@
     padding-bottom: 30px;
 }
 
+.navbar {
+    li {
+        position: relative;
+        span {
+            &.live-true {
+                position: absolute;
+                display: inline-block;
+                width: 10px;
+                height: 10px;
+                top: 10%;
+                right: 10%;
+                background: darkred;
+                border: 1px solid palegreen;
+                border-radius: 5px;
+            }
+        }
+    }
+}
+
 .playlists, .playlist {
     section {
         display: -webkit-flex;

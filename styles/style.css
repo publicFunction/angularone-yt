@@ -5,13 +5,30 @@
 }
 
 /* line 7, ../sass/style.scss */
+.navbar li {
+  position: relative;
+}
+/* line 10, ../sass/style.scss */
+.navbar li span.live-true {
+  position: absolute;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  top: 10%;
+  right: 10%;
+  background: darkred;
+  border: 1px solid palegreen;
+  border-radius: 5px;
+}
+
+/* line 26, ../sass/style.scss */
 .playlists section, .playlist section {
   display: -webkit-flex;
   display: flex;
   -webkit-flex-flow: row wrap;
   flex-flow: row wrap;
 }
-/* line 12, ../sass/style.scss */
+/* line 31, ../sass/style.scss */
 .playlists section article, .playlist section article {
   -webkit-flex: 1 auto;
   flex: 1 auto;
@@ -20,11 +37,11 @@
   text-align: center;
   position: relative;
 }
-/* line 19, ../sass/style.scss */
+/* line 38, ../sass/style.scss */
 .playlists section article h2, .playlist section article h2 {
   font-size: 125%;
 }
-/* line 22, ../sass/style.scss */
+/* line 41, ../sass/style.scss */
 .playlists section article a, .playlist section article a {
   position: absolute;
   top: 0;
@@ -33,40 +50,40 @@
   height: 100%;
 }
 
-/* line 35, ../sass/style.scss */
+/* line 54, ../sass/style.scss */
 .playlist section article {
   text-align: left;
 }
-/* line 37, ../sass/style.scss */
+/* line 56, ../sass/style.scss */
 .playlist section article img {
   display: inline-block;
   margin-right: 5%;
 }
-/* line 41, ../sass/style.scss */
+/* line 60, ../sass/style.scss */
 .playlist section article h2 {
   display: inline-block;
   width: 55%;
   font-size: 200%;
   font-weight: 700;
 }
-/* line 47, ../sass/style.scss */
+/* line 66, ../sass/style.scss */
 .playlist section article p {
   display: inline-block;
   margin: 2rem 1rem;
 }
 
-/* line 57, ../sass/style.scss */
+/* line 76, ../sass/style.scss */
 section.featured article {
   position: relative;
   height: auto;
   width: 90%;
   margin: 0 auto;
 }
-/* line 62, ../sass/style.scss */
+/* line 81, ../sass/style.scss */
 section.featured article h2 {
   font-size: 125%;
 }
-/* line 65, ../sass/style.scss */
+/* line 84, ../sass/style.scss */
 section.featured article a {
   position: absolute;
   top: 0;
@@ -74,17 +91,17 @@ section.featured article a {
   width: 100%;
   height: 100%;
 }
-/* line 72, ../sass/style.scss */
+/* line 91, ../sass/style.scss */
 section.featured article div {
   width: 100%;
 }
-/* line 74, ../sass/style.scss */
+/* line 93, ../sass/style.scss */
 section.featured article div.feature {
   width: 87.5%;
   height: 480px;
   margin: 0 auto;
 }
-/* line 78, ../sass/style.scss */
+/* line 97, ../sass/style.scss */
 section.featured article div.feature iframe {
   position: relative;
   width: 100%;
@@ -92,24 +109,24 @@ section.featured article div.feature iframe {
   top: 0;
   left: auto;
 }
-/* line 87, ../sass/style.scss */
+/* line 106, ../sass/style.scss */
 section.featured article p {
   margin: 20px 0;
 }
-/* line 92, ../sass/style.scss */
+/* line 111, ../sass/style.scss */
 section.latest, section.activity {
   display: -webkit-flex;
   display: flex;
   -webkit-flex-flow: row wrap;
   flex-flow: row wrap;
 }
-/* line 98, ../sass/style.scss */
+/* line 117, ../sass/style.scss */
 section.latest h2, section.activity h2 {
   width: 100%;
   display: inline-block;
   font-size: 135.7%;
 }
-/* line 103, ../sass/style.scss */
+/* line 122, ../sass/style.scss */
 section.latest article, section.activity article {
   -webkit-flex: 1;
   flex: 1;
@@ -118,11 +135,11 @@ section.latest article, section.activity article {
   text-align: center;
   position: relative;
 }
-/* line 110, ../sass/style.scss */
+/* line 129, ../sass/style.scss */
 section.latest article h2, section.activity article h2 {
   font-size: 125%;
 }
-/* line 113, ../sass/style.scss */
+/* line 132, ../sass/style.scss */
 section.latest article a, section.activity article a {
   position: absolute;
   top: 0;
@@ -131,15 +148,15 @@ section.latest article a, section.activity article a {
   height: 100%;
 }
 
-/* line 124, ../sass/style.scss */
+/* line 143, ../sass/style.scss */
 .footer {
   padding-bottom: 50px;
 }
-/* line 126, ../sass/style.scss */
+/* line 145, ../sass/style.scss */
 .footer > div {
   text-align: center;
 }
-/* line 128, ../sass/style.scss */
+/* line 147, ../sass/style.scss */
 .footer > div.twitter {
   max-height: 425px;
   overflow-y: scroll;

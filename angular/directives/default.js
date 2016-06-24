@@ -1,20 +1,21 @@
 (function() {
 
     angular.module('directives', [])
-        .directive('embedIframe', function(Api) {
-            /*return {
-                restrict: 'E',
-                scope : {
-                    videoId : '@videoId'
-                },
-                template : function(elem, attr) {
-                    console.log(elem);
-                    console.log(attr);
+        .directive('getLiveStatus', function($interval) {
 
+            return {
+                element: 'A',
+                template : 'Live<span class="live-{{is_live}}"></span>',
+                link: function(scope, elem, attr) {
+                    scope.is_live = false;
 
-                    return '<iframe height="480" src="{{attr.videoId}}" frameborder="0" allowfullscreen></iframe>'
+                    $interval(function() {
+                        console.log("Check Live Status");
+                        scope.is_live = false;
+                    }, 2000);
+
                 }
-            };*/
+            }
         });
 
 })();

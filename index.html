@@ -8,7 +8,6 @@
         <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" type="text/css" rel="stylesheet">
         <link href="//bootswatch.com/slate/bootstrap.min.css" type="text/css" rel="stylesheet">
         <link href="/styles/style.css" type="text/css" rel="stylesheet">
-        <script src="/angular.min.js"></script>
         <title>publicFunction</title>
     </head>
     <body>
@@ -28,7 +27,7 @@
                         <ul class="nav navbar-nav">
                             <li ng-class=""><a ng-click="menu.setMenu('playlists')" ui-sref="home">Home</a></li>
                             <li ng-class="{active: menu.getMenu('playlists')}"><a ng-click="menu.setMenu('playlists')" ui-sref="playlists">Playlists</a></li>
-                            <li ng-class="{active: menu.getMenu('live')}"><a ng-click="menu.setMenu('live')" ui-sref="live">Live</a></li>
+                            <li ng-class="{active: menu.getMenu('live')}"><a get-live-status ng-click="menu.setMenu('live')" ui-sref="live">Live</a></li>
                             <li ng-class="{active: menu.getMenu('about')}"><a ng-click="menu.setMenu('about')" ui-sref="about">About</a></li>
                             <li ng-class="{active: menu.getMenu('contact')}"><a ng-click="menu.setMenu('contact')" ui-sref="contact">Contact</a></li>
                             <!--<li class="dropdown">
@@ -56,6 +55,7 @@
         <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
         <script src="//code.jquery.com/ui/1.11.2/jquery-ui.min.js"></script>
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+        <script src="/angular.min.js"></script>
         <script src="/angular/config.json"></script>
         <script src="/angular/app.js"></script>
         <script src="/javascripts/angyt.js"></script>

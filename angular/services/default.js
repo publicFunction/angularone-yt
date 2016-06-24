@@ -14,6 +14,10 @@
             },
             getEmbedUrl : function() {
                 return $rootScope.config.embed_url;
+            },
+            getLiveStreamStatus : function() {
+                
+                //GET https://www.googleapis.com/youtube/v3/liveStreams?part=status&id=default&maxResults=1&key={YOUR_API_KEY}
             }
         };
     });
