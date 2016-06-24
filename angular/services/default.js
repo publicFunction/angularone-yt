@@ -42,7 +42,7 @@
                 getLatestVideos: function() {
                     var params = {
                         "part" : api_args.part,
-                        "maxResults" : 5,
+                        "maxResults" : 6,
                         "channelId" : api_args.channel_id,
                         "order" : "date",
                         "type" : "video",
@@ -56,7 +56,7 @@
                 getLatestActivity: function() {
                     var params = {
                         "part" : api_args.part,
-                        "maxResults" : 5,
+                        "maxResults" : 6,
                         "channelId" : api_args.channel_id,
                         "key" : Api.config.key.browser
                     };

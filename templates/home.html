@@ -3,8 +3,8 @@
 
     </header>
     <div>
+        <h2>Todays Featured Video</h2>
         <section class="featured">
-            <h2>Todays Featured Video</h2>
             <article ng-repeat="(index, video) in featured.items">
                 <h2>{{video.snippet.title}}</h2>
                 <div class="feature" data-video="{{embedurl}}{{video.id.videoId}}">
@@ -13,19 +13,21 @@
                 <p>{{video.snippet.description}}</p>
             </article>
         </section>
+        <h2>My Latest Content</h2>
         <section class="latest">
-            <h2>My Latest Content</h2>
-            <article ng-repeat="(index, video) in latest.items" style="background-image: url('{{video.snippet.thumbnails.medium.url}}');">
+            <article ng-repeat="(index, video) in latest.items">
+                <a ng-href="#"></a>
+                <img src="{{video.snippet.thumbnails.medium.url}}" width="{{video.snippet.thumbnails.medium.width}}" height="{{video.snippet.thumbnails.medium.height}}" alt="Thumbnail {{video.snippet.title}}" />
                 <h2>{{video.snippet.title}}</h2>
-                <p>{{video.snippet.description}}</p>
             </article>
         </section>
+        <h2>My Latest Activity</h2>
         <section class="activity">
-            <h2>My Latest Activity</h2>
             <article ng-repeat="activity in activities.items">
-                <span class="type">{{activity.snippet.type.charAt(0).toUpperCase() + activity.snippet.type.slice(1)}}</span>
+                <h3 class="type">{{activity.snippet.type.charAt(0).toUpperCase() + activity.snippet.type.slice(1)}}</h3>
+                <a ng-href="#"></a>
+                <img src="{{activity.snippet.thumbnails.medium.url}}" width="{{activity.snippet.thumbnails.medium.width}}" height="{{activity.snippet.thumbnails.medium.height}}" alt="Thumbnail {{activity.snippet.title}}" />
                 <h2>{{activity.snippet.title}}</h2>
-                <p>{{activity.snippet.description}}</p>
             </article>
         </section>
     </div>
