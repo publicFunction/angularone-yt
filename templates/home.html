@@ -15,7 +15,7 @@
         </section>
         <section class="latest">
             <h2>My Latest Content</h2>
-            <article ng-repeat="(index, video) in latest.items" style="background: url('{{video.snippet.thumbnails.medium.url}}');">
+            <article ng-repeat="(index, video) in latest.items" style="background-image: url('{{video.snippet.thumbnails.medium.url}}');">
                 <h2>{{video.snippet.title}}</h2>
                 <p>{{video.snippet.description}}</p>
             </article>

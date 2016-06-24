@@ -84,6 +84,23 @@ section {
             }
         }
     }
+    &.latest {
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-flow: row wrap;
+        flex-flow: row wrap;
+        article {
+            -webkit-flex: 1 auto;
+            flex: 1 auto;
+            align-content: space-between;
+            margin: 1rem;
+            text-align: center;
+            position: relative;
+            width: 20%;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+    }
 }
 
 .footer {

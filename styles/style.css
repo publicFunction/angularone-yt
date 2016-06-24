@@ -90,12 +90,31 @@ section.featured article div.feature iframe {
 section.featured article p {
   margin: 20px 0;
 }
+/* line 87, ../sass/style.scss */
+section.latest {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+}
+/* line 92, ../sass/style.scss */
+section.latest article {
+  -webkit-flex: 1 auto;
+  flex: 1 auto;
+  align-content: space-between;
+  margin: 1rem;
+  text-align: center;
+  position: relative;
+  width: 20%;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
 
-/* line 90, ../sass/style.scss */
+/* line 107, ../sass/style.scss */
 .footer > div {
   text-align: center;
 }
-/* line 92, ../sass/style.scss */
+/* line 109, ../sass/style.scss */
 .footer > div.twitter {
   max-height: 425px;
   overflow-y: scroll;
