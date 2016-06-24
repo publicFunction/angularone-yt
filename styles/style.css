@@ -131,11 +131,15 @@ section.latest article a, section.activity article a {
   height: 100%;
 }
 
-/* line 125, ../sass/style.scss */
+/* line 124, ../sass/style.scss */
+.footer {
+  padding-bottom: 50px;
+}
+/* line 126, ../sass/style.scss */
 .footer > div {
   text-align: center;
 }
-/* line 127, ../sass/style.scss */
+/* line 128, ../sass/style.scss */
 .footer > div.twitter {
   max-height: 425px;
   overflow-y: scroll;
