@@ -5,7 +5,7 @@
             <article ng-repeat="item in playlists.items">
                 <img src="{{item.snippet.thumbnails.medium.url}}" width="{{item.snippet.thumbnails.medium.width}}" height="{{item.snippet.thumbnails.medium.height}}" alt="Thumbnail {{item.snippet.title}}" />
                 <h2>{{item.snippet.title}}</h2>
-                <a ui-sref="playlist-details({'id' : item.id})"></a>
+                <a ui-sref="playlist-details({'id' : item.id})" ng-click="rememberPlayListTitle(item.snippet.title)"></a>
             </article>
         </section>
     </div>

@@ -42,6 +42,10 @@
         function ($scope, $state, $http, PlaylistsService) {
             $scope.playlists = {};
             $scope.playlists = PlaylistsService.playlists();
+
+            $scope.rememberPlayListTitle = function (title) {
+                localStorage.setItem('playlist_title', title);
+            }
         }
     ]);
 
@@ -53,6 +57,11 @@
 
             $scope.playlist = {};
             $scope.playlist = PlaylistServiceView.getPlaylistContent().playlist();
+
+            $scope.playlist_title = {};
+            if(localStorage.getItem('menu').length) {
+                $scope.playlist_title = localStorage.getItem('playlist_title')+' Playlist';
+            }
 
         }
     ]);
