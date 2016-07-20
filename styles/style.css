@@ -1,163 +1,119 @@
-/* line 1, ../sass/style.scss */
 .welcome {
   min-height: 500px;
-  padding-bottom: 30px;
-}
+  padding-bottom: 30px; }
 
-/* line 7, ../sass/style.scss */
 .navbar li {
-  position: relative;
-}
-/* line 10, ../sass/style.scss */
-.navbar li span.live-true {
-  position: absolute;
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  top: 10%;
-  right: 10%;
-  background: darkred;
-  border: 1px solid palegreen;
-  border-radius: 5px;
-}
+  position: relative; }
+  .navbar li span.live-true {
+    position: absolute;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    top: 10%;
+    right: 10%;
+    background: darkred;
+    border: 1px solid palegreen;
+    border-radius: 5px; }
 
-/* line 26, ../sass/style.scss */
 .playlists section, .playlist section {
   display: -webkit-flex;
   display: flex;
   -webkit-flex-flow: row wrap;
-  flex-flow: row wrap;
-}
-/* line 31, ../sass/style.scss */
-.playlists section article, .playlist section article {
-  -webkit-flex: 1 auto;
-  flex: 1 auto;
-  align-content: space-between;
-  margin: 1rem;
-  text-align: center;
-  position: relative;
-}
-/* line 38, ../sass/style.scss */
-.playlists section article h2, .playlist section article h2 {
-  font-size: 125%;
-}
-/* line 41, ../sass/style.scss */
-.playlists section article a, .playlist section article a {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
+  flex-flow: row wrap; }
+  .playlists section article, .playlist section article {
+    -webkit-flex: 1 auto;
+    flex: 1 auto;
+    align-content: space-between;
+    margin: 1rem;
+    text-align: center;
+    position: relative; }
+    .playlists section article h2, .playlist section article h2 {
+      font-size: 125%; }
+    .playlists section article a, .playlist section article a {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%; }
+    .playlists section article img, .playlist section article img {
+      width: 100%;
+      max-width: 320px;
+      height: auto; }
 
-/* line 54, ../sass/style.scss */
 .playlist section article {
-  text-align: left;
-}
-/* line 56, ../sass/style.scss */
-.playlist section article img {
-  display: inline-block;
-  margin-right: 5%;
-}
-/* line 60, ../sass/style.scss */
-.playlist section article h2 {
-  display: inline-block;
-  width: 55%;
-  font-size: 200%;
-  font-weight: 700;
-}
-/* line 66, ../sass/style.scss */
-.playlist section article p {
-  display: inline-block;
-  margin: 2rem 1rem;
-}
+  text-align: left; }
+  .playlist section article img {
+    display: inline-block;
+    margin-right: 5%;
+    width: 100%;
+    max-width: 320px;
+    height: auto; }
+  .playlist section article h2 {
+    display: inline-block;
+    width: 55%;
+    font-size: 200%;
+    font-weight: 700; }
+  .playlist section article p {
+    display: inline-block;
+    margin: 2rem 1rem; }
 
-/* line 76, ../sass/style.scss */
 section.featured article {
   position: relative;
   height: auto;
   width: 90%;
-  margin: 0 auto;
-}
-/* line 81, ../sass/style.scss */
-section.featured article h2 {
-  font-size: 125%;
-}
-/* line 84, ../sass/style.scss */
-section.featured article a {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-/* line 91, ../sass/style.scss */
-section.featured article div {
-  width: 100%;
-}
-/* line 93, ../sass/style.scss */
-section.featured article div.feature {
-  width: 87.5%;
-  height: 480px;
-  margin: 0 auto;
-}
-/* line 97, ../sass/style.scss */
-section.featured article div.feature iframe {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: auto;
-}
-/* line 106, ../sass/style.scss */
-section.featured article p {
-  margin: 20px 0;
-}
-/* line 111, ../sass/style.scss */
+  margin: 0 auto; }
+  section.featured article h2 {
+    font-size: 125%; }
+  section.featured article a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+  section.featured article div {
+    width: 100%; }
+    section.featured article div.feature {
+      width: 87.5%;
+      height: 480px;
+      margin: 0 auto; }
+      section.featured article div.feature iframe {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: auto; }
+  section.featured article p {
+    margin: 20px 0; }
+
 section.latest, section.activity {
   display: -webkit-flex;
   display: flex;
   -webkit-flex-flow: row wrap;
-  flex-flow: row wrap;
-}
-/* line 117, ../sass/style.scss */
-section.latest h2, section.activity h2 {
-  width: 100%;
-  display: inline-block;
-  font-size: 135.7%;
-}
-/* line 122, ../sass/style.scss */
-section.latest article, section.activity article {
-  -webkit-flex: 1;
-  flex: 1;
-  align-content: space-between;
-  margin: 1rem;
-  text-align: center;
-  position: relative;
-}
-/* line 129, ../sass/style.scss */
-section.latest article h2, section.activity article h2 {
-  font-size: 125%;
-}
-/* line 132, ../sass/style.scss */
-section.latest article a, section.activity article a {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
+  flex-flow: row wrap; }
+  section.latest h2, section.activity h2 {
+    width: 100%;
+    display: inline-block;
+    font-size: 135.7%; }
+  section.latest article, section.activity article {
+    -webkit-flex: 1;
+    flex: 1;
+    align-content: space-between;
+    margin: 1rem;
+    text-align: center;
+    position: relative; }
+    section.latest article h2, section.activity article h2 {
+      font-size: 125%; }
+    section.latest article a, section.activity article a {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%; }
 
-/* line 143, ../sass/style.scss */
 .footer {
-  padding-bottom: 50px;
-}
-/* line 145, ../sass/style.scss */
-.footer > div {
-  text-align: center;
-}
-/* line 147, ../sass/style.scss */
-.footer > div.twitter {
-  max-height: 425px;
-  overflow-y: scroll;
-}
+  padding-bottom: 50px; }
+  .footer > div {
+    text-align: center; }
+    .footer > div.twitter {
+      max-height: 425px;
+      overflow-y: scroll; }
