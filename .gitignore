@@ -1,2 +1,4 @@
 .sass-cache/
 .idea/
+i18n/ngLocale/
+node_modules/

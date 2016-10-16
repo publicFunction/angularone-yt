@@ -1,7 +1,7 @@
 (function(){
 
     var app_config;
-    var application = angular.module('boilerplate', ['controllers', 'services', 'directives', 'ngCookies', 'ui.router']);
+    var application = angular.module('boilerplate', ['controllers', 'services', 'directives', 'ngCookies', 'ui.router', 'angularModalService']);
 
     /* Routes */
     application.config(function($stateProvider, $urlRouterProvider, $sceDelegateProvider) {
