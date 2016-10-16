@@ -13,8 +13,8 @@
         };
     }]);
 
-    controllers.controller('DefaultController', ['$scope', '$state', '$http', '$rootScope', 'latestVideoService', 'Api',
-        function ($scope, $state, $http, $rootScope, latestVideoService, Api) {
+    controllers.controller('DefaultController', ['$scope', '$state', '$http', '$rootScope', 'latestVideoService', 'Api', 'ModalService',
+        function ($scope, $state, $http, $rootScope, latestVideoService, Api, ModalService) {
 
             $scope.featured = {};
             $scope.featured = latestVideoService.getFeaturedVideo().collection();
@@ -27,8 +27,27 @@
 
             $scope.getIframeSrc = function (videoId) {
                 return latestVideoService.getEmbedUrl()+videoId;
-            }
+            };
 
+            $scope.viewVideo = function(video) {
+                ModalService.showModal({
+                    templateUrl : '/templates/videos/detail.html',
+                    controller: 'VideoController',
+                    inputs: {
+                        video : video
+                    }
+                }).then(function (modal) {
+                    
+                });
+            }
+        }
+    ]);
+
+    controllers.controller('VideoController', ['$scope', '$state', '$http', '$rootScope', 'video', 'close',
+        function ($scope, $state, $http, $rootScope, video, close) {
+
+            $scope.close = close;
+            
         }
     ]);
 

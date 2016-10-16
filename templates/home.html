@@ -16,7 +16,7 @@
         <h2>My Latest Content</h2>
         <section class="latest">
             <article ng-repeat="(index, video) in latest.items">
-                <a ng-href="#"></a>
+                <a ng-click="viewVideo(video)" class="btn btn-default" href="javscript:void();"></a>
                 <img src="{{video.snippet.thumbnails.medium.url}}" width="{{video.snippet.thumbnails.medium.width}}" height="{{video.snippet.thumbnails.medium.height}}" alt="Thumbnail {{video.snippet.title}}" />
                 <h2>{{video.snippet.title}}</h2>
             </article>
